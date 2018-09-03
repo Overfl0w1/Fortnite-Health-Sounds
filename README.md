@@ -19,6 +19,7 @@ time
 ```
 # How To Use It
 Play in Fullscreen in 1920x1080p resolution.
+
 When finish intalling all the libraries navigate using the Command Prompt to the folder where you have the script, open the game and when you leave the bus type in the Command Prompt:
 ```
 python main.py
