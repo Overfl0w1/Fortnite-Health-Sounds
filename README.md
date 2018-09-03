@@ -6,6 +6,8 @@ This is my first python srcipt, so expect the code to be messy and not perfect
 This is a Script made with Python that play sounds when you gain or lose health using OCR
 
 To make others hear the sounds use a program like [Virtual Audio Cable](https://www.vb-audio.com/Cable/) to make a virtual microphone that stream the PC Audio, with that other will hear all the sounds throught the voice chat (**DONT USE THIS TO BOTHER OTHER PLAYERS**)
+
+View releases [here](https://github.com/RKaoZ/Fortnite-Health-Sounds/releases)
 # Requirements
 You need Python, I recomend using the 3.6 version of [Anaconda](https://www.anaconda.com/download/), and this libraries:
 ```
