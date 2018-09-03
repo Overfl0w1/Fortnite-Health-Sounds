@@ -33,6 +33,6 @@ pium.mp3 plays when you lose health
 # Bugs
 The known bugs are:
 ```
-OCR fails to read some numbers and will crash
-Sometimes detects you have gain health when you have lost health
+- OCR fails to read some numbers and will crash
+- Sometimes detects you have gain health when you have lost health
 ```
