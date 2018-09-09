@@ -5,7 +5,7 @@ This is a Script made with Python that play sounds when you gain or lose health 
 
 Only you will hear the sounds!!
 
-View releases [here](https://github.com/RKaoZ/Fortnite-Health-Sounds/releases)
+For the .exe version view releases [here](https://github.com/RKaoZ/Fortnite-Health-Sounds/releases)
 # Requirements
 You need Python, I recomend using the 3.6 version of [Anaconda](https://www.anaconda.com/download/), and this libraries:
 ```
