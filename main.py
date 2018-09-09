@@ -5,53 +5,47 @@ from PIL import ImageGrab
 from pygame import mixer
 import time
 
-class Accumulator(object):
-    none = None
-    def also(self, condition):
-        self.none = not condition and (self.none is None or self.none)
-        return condition
-
 previous = 100 #initial value of previous health
 
-def start(): #here starts
- acc = Accumulator()
- also = acc.also
+def image(): #Takes screenshot of the health, saves it and read from it
+   im = ImageGrab.grab(bbox=(760, 968, 810, 990)) #makes a screnshot of the health
+   im.save("health.jpg") #saves the image
 
- if also(__name__ == '__main__'):
-  x = 760
-  y = 968
+   im = Image.open("health.jpg") #opens the image
+   health = pytesseract.image_to_string(im) #writes the text read from image
 
-  offx = 50
-  offy = 22
-    
-  im=ImageGrab.grab(bbox=(x, y, x + offx, y + offy)) #makes a screnshot of the health
-  im.save("health.jpg") #saves the image
+   check(health) #jumps to check(health)
 
-  im = Image.open("health.jpg") #opens the image
-  text = int(pytesseract.image_to_string(im))
+def check(health): #checks if health have a valid value to be converted to an integer
+    try: #tries to convert health to an integer
+        health = int(health)
+        result(health)
+    except ValueError: #if health cant be converted prints error and starts again from image()
+        print ("Failed to read from image")
+        image()
 
-  print ("Health=", text) #prints the health
- 
+def result(health): #compares the previous health to the current one and plays sound
   global previous #calls the variable previous
-  if text < previous: #checks if the health is lower than your previous health
+  print ("Health=", health)
+  if health < previous: #checks if the health is lower than your previous health
    print("HIT")
    mixer.init() #initialeizes mixer
    mixer.music.load("pium.mp3") #loads the audio file
    mixer.music.play() #plays the audio file
-   previous = text #updates the previous health
+   previous = health #updates the previous health
    print("Previous Health=", previous) #prints your previous health
 
-  if text > previous: #checks if the health is higher than your previous health
+  if health > previous: #checks if the health is higher than your previous health
     print("NICE")
     mixer.init() #initialeizes mixer
     mixer.music.load("nice.mp3") #loads the audio file
     mixer.music.play() #plays the audio file
-    previous = text #updates the previous health
+    previous = health #updates the previous health
     print("Previous Health=", previous) #prints your previous health
-  else: #
-   previous = text #updates the previous health
+  else: 
+   previous = health #updates the previous health
    print("Previous Health=", previous) #prints your previous health
 
-while True:
-  time.sleep(0.5) #Loop cooldown in seconds
-  start() #restarts from start
+while True: #repeats the code if true
+    time.sleep(1) #cooldown in seconds
+    image() #starts from image() again
