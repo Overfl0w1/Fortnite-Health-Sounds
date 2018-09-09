@@ -23,7 +23,7 @@ When finish intalling all the libraries navigate using the Command Prompt to the
 python main.py
 ```
 # Modifications
-You can change the audio that plays when you lose or gain health. Just replace the audios whit the ones you want.
+You can change the audio that plays when you lose or gain health. Just replace the audios with the ones you want.
 
 **DONT CHANGE THE FOLDER OR NAME OF THE AUDIOS OR THEY WONT PLAY**
 ```
