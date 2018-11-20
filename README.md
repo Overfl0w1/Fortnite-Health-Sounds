@@ -1,7 +1,7 @@
 # Disclaimer
 This is my first python srcipt, so expect the code to be messy and not perfect
 # What is this
-This is a Script made with Python that play sounds when you gain or lose health using OCR
+This is a Script made with Python that play sounds when you gain or lose health in Fortnite, reading your health using OCR
 
 Only you will hear the sounds!!
 
