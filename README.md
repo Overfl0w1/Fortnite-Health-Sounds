@@ -7,7 +7,7 @@ Only you will hear the sounds!!
 
 For the .exe version view releases [here](https://github.com/RKaoZ/Fortnite-Health-Sounds/releases)
 # Requirements
-You need Python, I recomend using the 3.6 version of [Anaconda](https://www.anaconda.com/download/), and this libraries:
+You need Python and this libraries:
 ```
 pyscreenshot
 pytesseract
